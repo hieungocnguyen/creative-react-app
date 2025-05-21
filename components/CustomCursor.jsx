@@ -55,7 +55,7 @@ const CustomCursor = () => {
   return (
     <>
       <div
-        className={`custom-cursor-ring fixed pointer-events-none transition-opacity duration-300 ${
+        className={`custom-cursor-ring fixed pointer-events-none transition-opacity duration-300 z-50 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
         style={{
@@ -65,10 +65,10 @@ const CustomCursor = () => {
           width: isPointer ? "180px" : "20px",
           height: isPointer ? "180px" : "20px",
           borderRadius: "50%",
-          mixBlendMode: "difference",
+          mixBlendMode: "normal",
           transition:
             "width 0.2s ease-out, height 0.2s ease-out, transform 0.01s linear, background-color 0.2s ease",
-          backgroundColor: isPointer ? cursorColor : "#000000",
+          backgroundColor: isPointer ? cursorColor : "white",
         }}
       />
     </>
